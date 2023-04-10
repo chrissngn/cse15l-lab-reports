@@ -1,7 +1,7 @@
 # Lab Report 1 - Remote Access and FileSystem - How to log into course specific account
 
 ## Step 1 - Access VS Code
-Open to install vs code on your device. Depending on your device the layout may vary.
+Open or [install](https://code.visualstudio.com/download) vs code on your device. Depending on your device the layout may vary.
 
 ![Screenshot](vscodeOpen.png)
 
@@ -54,4 +54,14 @@ ieng6-202   17:35:01   7   4.23,  4.20,  4.26
 ieng6-203   17:35:01   16  1.51,  1.50,  1.49
 ```
 ## Step 3 - Run Commands
-Once you are longged in you are ready to run some commands. 
+Once you are logged in you are ready to run some commands, **cd**, **ls**, **pwd**, **mkdir**, and **cp**. For example:
+```
+cd ~
+cd
+ls -lat
+ls -a
+ls <directory> where <directory> is /home/linux/ieng6/cs15lsp23/cs15lsp23abc, where the abc is one of the other group members’ username
+cp /home/linux/ieng6/cs15lsp23/public/hello.txt ~/
+cat /home/linux/ieng6/cs15lsp23/public/hello.txt
+```
+![Screenshot](vscodeCommands.png)
