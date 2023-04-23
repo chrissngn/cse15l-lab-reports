@@ -120,8 +120,6 @@ Description: Similarly to the previous screenshot this url and query runs the `h
 
 **Code from ArrayExamples.java before debug**
 ```
-
-
 public class ArrayExamples {
 
   // Changes the input array to be in reversed order
@@ -159,11 +157,48 @@ public class ArrayExamples {
 }
 
 ```
-Symptoms
-Inputs - Test Cases
+**Inputs - Test Cases**
 ```
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class ArrayTests {
+	@Test 
+	public void testReverseInPlace() {
+    int[] input1 = { 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 3 }, input1);
+	}
+
+  @Test 
+	public void testReverseInPlace2() {
+    int[] input2 = {4,5,6};
+    ArrayExamples.reverseInPlace(input2);
+    assertArrayEquals(new int[]{6,5,4}, input2);
+	}
+
+  @Test
+  public void testReversed() {
+    int[] input1 = { };
+    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+  }
+
+  @Test
+  public void testReversed2() {
+    int[] input2 = {1,2,3};
+    assertArrayEquals(new int[]{3,2,1}, ArrayExamples.reversed(input2));
+  }
+}
 ```
-Bugs
+**Symptoms** 
+![image](https://user-images.githubusercontent.com/123513732/233825905-35fc13ac-6e10-440a-bf10-a8df698c9ea5.png)
+The two test cases that passed were `testReverseInPlace()` and `testReversed()` because they did not trigger the bug which is related to the indices or reassignment. Since there is only one element, no matter, how the element is arranged it would still remain in the same place and return the desired result. On the other end, `testReverseInPlace2()` and `testReversed2()` failed because it displays the bugs now that there are more than one element.
+
+**Bugs**
+From the test cases and looking at the code I noticed that with the `reverseInPlace()` method the elements were not being assigned properly. The last element, for example, would get assigned to the index of the first element but the first element would not get assigned to the index of the last element. Even if the contents inside the loops were working properly they method would still not work properly because the for loop runs twice the amount of times it needs which would reverse the effects. For the `reversed()` method the values of the returned array become zero because the program in returning the original array reassigned with the values of the new array which are all zero instead of return the new array reassigned with values from the orignal array.
+
+To fix these issues, the `reverseInPlace()` loop is reduced to running for half the amount of times and values are reassigned on both ends of the array. for the `reversed()` method the `arr` and `newArray` values inside of the for loops are exchanged and the end of the loop returns the `newArray` instead of the original array `arr`. 
+
 **Code from ArrayExamples.java after debug**
 ```
 public class ArrayExamples {
