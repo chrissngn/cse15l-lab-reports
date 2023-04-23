@@ -96,14 +96,6 @@ class StringServer {
 ```
 
 **Web Server in Action**
-![Screenshot](StringServerBlank.png)
-Description: In this screenshot the web server is launched with just the link which runs the handle and start methods in the Server.java file. Since the url was created the if statement in the main method did not run since 3000 is a valid port number. With the way I wrote this program the first if statement in the handle request method does get run which returns the `message` however it is blank since the default variable `message` is set to an empty string.
-
-![Screenshot](StringServer1.png)
-Description: 
-
-![Screenshot](StringServer2.png)
-
 To run this program compile using
 `javac Server.java StringServer.java`
 
@@ -113,6 +105,102 @@ Which returns a prompt in the terminal similar to this:
 `Server Started! Visit http://localhost:3000 to visit.`
 
 Every time the site is refreshed or a new command is added in the url the terminal returns the path `Path: /favicon.ico`for just a refresh and `Path: /add-message`when the command is used
+
 ![image](https://user-images.githubusercontent.com/123513732/233822684-7973e410-29a3-471f-b9bb-e87163c376ca.png)
+![Screenshot](StringServerBlank.png)
+Description: In this screenshot the web server is launched with just the link which runs the `handle()` and `start()` methods in the Server.java file. Since the url was created the if statement in the `main()` method did not run since 3000 is a valid integer port number but it does run the `start()` method following it. With the way I wrote this program the first if statement in the `handleRequest()` method does get run which returns the `message` however it is blank since the default variable `message` is set to an empty string.
+
+![Screenshot](StringServer1.png)
+Description: Once the server is up there is no need to run the methods to create the url again. When arguments are added to the url, for example in this case, `http://localhost:3000/add-message?s=hello` the program will run the `handleRequest()` method but instead of restarting from blank, if the proper query is added, the program will add the new string to the existing variable. The result of the this action is "hello" added on the next line of the blank line.
+
+![Screenshot](StringServer2.png)
+Description: Similarly to the previous screenshot this url and query runs the `handleRequest()` method which further adds onto the `message` variable. Once more it sends the new string to the next line while also displaying all the previous string values.
+
+## Part 2 - Bugs
+
+**Code from ArrayExamples.java before debug**
+```
 
 
+public class ArrayExamples {
+
+  // Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+
+  // Returns a *new* array with all the elements of the input array in reversed
+  // order
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }
+
+  // Averages the numbers in the array (takes the mean), but leaves out the
+  // lowest number when calculating. Returns 0 if there are no elements or just
+  // 1 element in the array
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+}
+
+```
+Symptoms
+Inputs - Test Cases
+```
+```
+Bugs
+**Code from ArrayExamples.java after debug**
+```
+public class ArrayExamples {
+
+  // Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) {
+      int original = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1]=original;
+    }
+  }
+
+  // Returns a *new* array with all the elements of the input array in reversed
+  // order
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+  }
+
+  // Averages the numbers in the array (takes the mean), but leaves out the
+  // lowest number when calculating. Returns 0 if there are no elements or just
+  // 1 element in the array
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+}
+```
