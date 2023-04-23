@@ -33,13 +33,17 @@ RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? 
 Password: 
 ```
-We have some issues with ITS so after loggining in you may encounter this prompt:
+We have some issues with ITS so after logging in you may encounter this prompt:
 ```
 Connection closed by 128.54.70.238 port 22
 ```
 If you are encountering this issue, try signing into your personal UCSD account followed by @ieng6.ucsd.edu:
 ```
 ⤇ ssh chn029@ieng6.ucsd.edu
+```
+Another option would be to sign in with your lab log in follow by -201 -202 or -203:
+```
+⤇ ssh cs15lsp23ko-202@ieng6.ucsd.edu
 ```
 You will then see a prompt similar to this:
 ```
@@ -56,12 +60,14 @@ ieng6-203   17:35:01   16  1.51,  1.50,  1.49
 ## Step 3 - Run Commands
 Once you are logged in you are ready to run some commands, **cd**, **ls**, **pwd**, **mkdir**, and **cp**. For example:
 ```
-cd ~
-cd
-ls -lat
-ls -a
-ls <directory> where <directory> is /home/linux/ieng6/cs15lsp23/cs15lsp23abc, where the abc is one of the other group members’ username
-cp /home/linux/ieng6/cs15lsp23/public/hello.txt ~/
-cat /home/linux/ieng6/cs15lsp23/public/hello.txt
+`cd ~`
+`cd`
+`ls -lat`
+`ls -a`
+`ls <directory>` where <directory> is /home/linux/ieng6/cs15lsp23/cs15lsp23abc, where the abc is one of the other group members’ username
+`cp /home/linux/ieng6/cs15lsp23/public/hello.txt ~/`
+`cat /home/linux/ieng6/cs15lsp23/public/hello.txt`
 ```
 ![Screenshot](vscodeCommands.png)
+
+The command `pwd` ran in the image stands for "print working directory" and after running the command the terminal returned "/home/linux/ieng6/oce/47/chn029" with is the current working directory. The next command being used is called `ls` which stand for "list" and to use this command we can call `ls <path>` which then lists out files and folders as displayed in the screenshot. `cp` is a command used to copy files or directories, however, since the file I was trying to copy did not exist it displays a message that says "no such file or directory." The `cat` or "concatenate" command stands for concatenate and can be sued to print the contents of the file by giving a path in the format of `cat <path> <another path>`.
