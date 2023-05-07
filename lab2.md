@@ -239,3 +239,5 @@ public class ArrayExamples {
   }
 }
 ```
+## Part 3 - Learnings
+The most useful thing that I learned from week 3 is the process for dealing with bugs by breaking them down into bugs, a flaw in the system, symptoms, the behavior of the program, and using failure inducing inputs which can be in the form of testers. Normally when I run into an issue with my code I tend to use a brute force method where I try changing code in different places randomly which often ends with a lot of frustration. The concept of breaking down the error seems like common sense, however, it is a process that I never formally utilized before and I am glad to know now.
