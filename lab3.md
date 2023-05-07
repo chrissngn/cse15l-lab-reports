@@ -9,8 +9,7 @@ Description: The `man grep` command
 
 ## Ways to Use `grep`
 ![image](https://user-images.githubusercontent.com/123513732/236665407-f0a47518-4076-47c5-8c05-1f0a32292dcc.png)
-Description: I used chat gpt to look up ways to use the grep command
-
+Description: I used chatgpt to look up ways to use the grep command.
 
 ## Basic Search
 `grep "search term" <file name>`
@@ -23,7 +22,18 @@ Description: I used chat gpt to look up ways to use the grep command
 `grep "search term" <file1> <file2> <file3>`
 ![image](https://user-images.githubusercontent.com/123513732/236668809-58f708ee-a513-4fac-904a-c2cfb00f3b23.png)
 
+`grep "target" plos/journal.pbio.0020013.txt 911report/chapter-3.txt biomed/1471-2091-3-4.txt`
+![image](https://user-images.githubusercontent.com/123513732/236669136-b6d4039d-38da-4310-90e2-82628c290e2a.png)
+
+## Search for multiple words 
+`grep "searchTerm1\|searchTerm2" <file name>`
+
 ## Case-insensitive Search
+`grep -i "search term" <file name>`
+![image](https://user-images.githubusercontent.com/123513732/236669321-a4c6fa73-8d62-422a-bb0e-b0ec5e47f1f8.png)
+
+`grep -i "search term" <file1> <file2>`
+![image](https://user-images.githubusercontent.com/123513732/236669461-35cf46cd-bcc5-49a3-a2d6-11fec0612c9c.png)
 
 ## Inverse Match Search(printing all lines that do not match search term)
 
