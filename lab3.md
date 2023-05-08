@@ -50,14 +50,16 @@ Description: For this example I searched for "this" across multiples files in di
 ## Inverse Match Search(printing all lines that do not match search term)
 `grep -v "search name" <file name>`
 ![image](https://user-images.githubusercontent.com/123513732/236724580-b3b42dad-43ac-4f3a-a6ad-c477a038bba7.png)
-Description: 
+Description: So far we've been expecting the lines that get returned to include the word we are searching for but we can also do the opposite, searching for lines that do not include the indicated search word. To do so it is useful to use the command `-v` which prints all the lines that do not match the search term. For this example I am searching for all the lines that do not include "cell." It may be difficult to tell but all the lines that are returned do not include the word "cell."
 
 `grep -v -i "the\|risk\|death" plos/pmed.0020180.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236724940-b0877bb8-c36b-4213-9f44-2e5225c5d31e.png)
+Description: For this example I combined the inverse match search with the case insensitive search method by typing the commands next to each other seperated with a space. I also searched for multiple words, "the," "risk," and "death." The results returned all the lines that do not contain "the," "risk," "death," "The," "Risk," or "Death," another useful use case for teh `-v` comamnd. 
 
 ## Line Count with Grep
 `grep -n "search name" <file name>`
 ![image](https://user-images.githubusercontent.com/123513732/236725272-d8172630-6acf-4d71-af8e-9a5133422fde.png)
+Descr
 
 `grep -v -i -n "the\|risk\|death" plos/pmed.0020180.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236725348-0ae20c2f-6a04-4098-b0de-6cd96ae5c857.png)
