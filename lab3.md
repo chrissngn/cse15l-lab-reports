@@ -1,6 +1,6 @@
 # Lab Report 3 - Researching Commands
 
-## Getting infomation on `grep` command
+## Getting infomation using `grep` command
 
 ![image](https://user-images.githubusercontent.com/123513732/236664973-1cf199fe-f464-4d76-b3a8-be4801ebe399.png)
 Description: The `man grep` command
@@ -9,7 +9,7 @@ Description: The `man grep` command
 
 ## Ways to Use `grep`
 ![image](https://user-images.githubusercontent.com/123513732/236665407-f0a47518-4076-47c5-8c05-1f0a32292dcc.png)
-Description: I used chatgpt to look up ways to use the grep command.
+Description: I used chatgpt to look up ways to use the grep command, the following uses of grep are taken from descriptions by chatgpt.
 
 ## Basic Search
 `grep "search term" <file name>`
@@ -27,6 +27,10 @@ Description: I used chatgpt to look up ways to use the grep command.
 
 ## Search for multiple words 
 `grep "searchTerm1\|searchTerm2" <file name>`
+![image](https://user-images.githubusercontent.com/123513732/236714141-f687aebd-ea2a-4a48-a5ba-8ce615a7f922.png)
+
+`grep "cells\|genes" plos/journal.pbio.0020040.txt biomed/ar118.txt`
+![image](https://user-images.githubusercontent.com/123513732/236716054-8c1b47d3-71f2-49bf-80e7-7c4e6e4f24a4.png)
 
 ## Case-insensitive Search
 `grep -i "search term" <file name>`
@@ -36,5 +40,5 @@ Description: I used chatgpt to look up ways to use the grep command.
 ![image](https://user-images.githubusercontent.com/123513732/236669461-35cf46cd-bcc5-49a3-a2d6-11fec0612c9c.png)
 
 ## Inverse Match Search(printing all lines that do not match search term)
-
-## Get Word Count with Grep
+`grep -v`
+## Line Count with Grep
