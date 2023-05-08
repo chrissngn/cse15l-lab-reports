@@ -3,17 +3,18 @@
 ## Getting infomation using `grep` command
 
 ![image](https://user-images.githubusercontent.com/123513732/236664973-1cf199fe-f464-4d76-b3a8-be4801ebe399.png)
-Description: The `man grep` command
 
 ![image](https://user-images.githubusercontent.com/123513732/236664898-9e8c97a6-3ef0-486f-b9e8-0266030ab170.png)
+Description: To find more infomration on how to use the `grep` coomand I used the `man grep` command which displays the manual page in the command prompt. Some of the sections of the manual include the name, a brief description of what it does, synopsis, an overview of the syntax, description, an explantation of how it works, and more.
 
 ## Ways to Use `grep`
 ![image](https://user-images.githubusercontent.com/123513732/236665407-f0a47518-4076-47c5-8c05-1f0a32292dcc.png)
-Description: I used chatgpt to look up ways to use the grep command, the following uses of grep are taken from descriptions by chatgpt.
+Description: Although the `man grep` command was useful in finding information about the command in general I wanted to look for more interesting ways of using the features and even combining them. I used chatgpt to look up more ways to use the grep command:https://chat.openai.com/. The following uses of grep are taken from descriptions by chatgpt.
 
 ## Basic Search
 `grep "search term" <file name>`
 ![image](https://user-images.githubusercontent.com/123513732/236665801-03d9142a-55ca-4d33-80ff-640ea2def2ed.png)
+Description: 
 
 `grep "acid" journal.pbio.0020035.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236668434-09165f47-33e1-431e-99b0-5377864a3dcf.png)
