@@ -45,11 +45,12 @@ Description: So far when using grep the search name needs to match exactly for t
 
 `grep -i "this" plos/journal.pbio.0020012.txt 911report/preface.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236669461-35cf46cd-bcc5-49a3-a2d6-11fec0612c9c.png)
-Description: For this example I 
+Description: For this example I searched for "this" across multiples files in different directories, `plos` and `911report`. The result returned lines containing either "this" or "This" along with the path to the specific file within the `technical` directory. This is another useful case to use the `-i` command.
 
 ## Inverse Match Search(printing all lines that do not match search term)
 `grep -v "search name" <file name>`
 ![image](https://user-images.githubusercontent.com/123513732/236724580-b3b42dad-43ac-4f3a-a6ad-c477a038bba7.png)
+Description: 
 
 `grep -v -i "the\|risk\|death" plos/pmed.0020180.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236724940-b0877bb8-c36b-4213-9f44-2e5225c5d31e.png)
