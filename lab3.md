@@ -36,14 +36,16 @@ Description: I had not idea that grep allowed for searching of multiple words un
 
 `grep "cells\|genes" plos/journal.pbio.0020040.txt biomed/ar118.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236716054-8c1b47d3-71f2-49bf-80e7-7c4e6e4f24a4.png)
-Description: In this example I combined the command's capability to search for multiple words and searching across multiple files. I searched for 
+Description: In this example I combined the command's capability to search for multiple words, searching across multiple files, and across directories. I searched for "cells" and "genes" within a file in the `plos` directory and the `biomed` directory. The result that it returned included all the lines that either had "cells" or "genes" alongs with the file path within the technical directory. This is another case where searching for multiple words would be useful.
 
 ## Case-insensitive Search
 `grep -i "search term" <file name>`
 ![image](https://user-images.githubusercontent.com/123513732/236669321-a4c6fa73-8d62-422a-bb0e-b0ec5e47f1f8.png)
+Description: So far when using grep the search name needs to match exactly for the line to get returned, however, we know that "disease" and "Disease" are essentially the same word. If we wanted to get the result of all the lines that match regardless of the case of the letter if could be useful to use `-i` in the command. For this example I searched for "as" and it returned all the lines the either had "as" or "As." 
 
-`grep -i "search term" <file1> <file2>`
+`grep -i "this" plos/journal.pbio.0020012.txt 911report/preface.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236669461-35cf46cd-bcc5-49a3-a2d6-11fec0612c9c.png)
+Description: For this example I 
 
 ## Inverse Match Search(printing all lines that do not match search term)
 `grep -v "search name" <file name>`
