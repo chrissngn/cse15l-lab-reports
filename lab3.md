@@ -54,12 +54,13 @@ Description: So far we've been expecting the lines that get returned to include 
 
 `grep -v -i "the\|risk\|death" plos/pmed.0020180.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236724940-b0877bb8-c36b-4213-9f44-2e5225c5d31e.png)
-Description: For this example I combined the inverse match search with the case insensitive search method by typing the commands next to each other seperated with a space. I also searched for multiple words, "the," "risk," and "death." The results returned all the lines that do not contain "the," "risk," "death," "The," "Risk," or "Death," another useful use case for teh `-v` comamnd. 
+Description: For this example I combined the inverse match search with the case insensitive search method by typing the commands next to each other seperated with a space. I also searched for multiple words, "the," "risk," and "death." The results returned all the lines that do not contain "the," "risk," "death," "The," "Risk," or "Death," another useful use case for the `-v` command. 
 
 ## Line Count with Grep
 `grep -n "search name" <file name>`
 ![image](https://user-images.githubusercontent.com/123513732/236725272-d8172630-6acf-4d71-af8e-9a5133422fde.png)
-Descr
+Description: Another command we can be useful aloneside the grep command is the `-n` command which counts and labels all the lines that match the word being searched. For this example I am searching for the word "risk" within a text file in the `plos` directory. The result returns all the lines that contain the word "risk" and add the line number that it came from in the text file.
 
 `grep -v -i -n "the\|risk\|death" plos/pmed.0020180.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236725348-0ae20c2f-6a04-4098-b0de-6cd96ae5c857.png)
+Description: For this example I combined the inverse contains command `-v` with the case insensitive command `-i` and the line count command `-n` while searching for multiple words "the," "risk," and "death." The result returns all the lines that contains "the," "risk," "death," "The," "Risk," or "Death" labelled with the line number that it came from the text file. This is another use case of the `-n` command alonside other grep commands. 
