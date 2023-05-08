@@ -40,5 +40,11 @@ Description: I used chatgpt to look up ways to use the grep command, the followi
 ![image](https://user-images.githubusercontent.com/123513732/236669461-35cf46cd-bcc5-49a3-a2d6-11fec0612c9c.png)
 
 ## Inverse Match Search(printing all lines that do not match search term)
-`grep -v`
+`grep -v "search name" <file name>`
+![image](https://user-images.githubusercontent.com/123513732/236724580-b3b42dad-43ac-4f3a-a6ad-c477a038bba7.png)
+
+`grep -v -i "the\|risk\|death" plos/pmed.0020180.txt`
+![image](https://user-images.githubusercontent.com/123513732/236724940-b0877bb8-c36b-4213-9f44-2e5225c5d31e.png)
+
 ## Line Count with Grep
+`grep -n "search name" <file name>`
