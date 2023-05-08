@@ -48,3 +48,7 @@ Description: I used chatgpt to look up ways to use the grep command, the followi
 
 ## Line Count with Grep
 `grep -n "search name" <file name>`
+![image](https://user-images.githubusercontent.com/123513732/236725272-d8172630-6acf-4d71-af8e-9a5133422fde.png)
+
+`grep -v -i -n "the\|risk\|death" plos/pmed.0020180.txt`
+![image](https://user-images.githubusercontent.com/123513732/236725348-0ae20c2f-6a04-4098-b0de-6cd96ae5c857.png)
