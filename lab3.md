@@ -77,6 +77,8 @@ This is what I searched for,
 This is the result,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/b2e127e9-a029-4cba-a944-b43d0a71c32e)
 
+Using the inverse command alongside grep would be useful for filtering through files. It may seem counter intuitive to be searching for words that are not in files but there are case where we may want to avoid certain terms so rather than searching for all the lines ourself and then marking other lines as the one we want we can simply do an inverse search with this command.
+
 ## Line Count with Grep
 `grep -n "search name" <file name>`
 ![image](https://user-images.githubusercontent.com/123513732/236725272-d8172630-6acf-4d71-af8e-9a5133422fde.png)
@@ -84,7 +86,9 @@ Description: Another command we can be useful aloneside the grep command is the 
 
 `grep -v -i -n "the\|risk\|death" plos/pmed.0020180.txt`
 ![image](https://user-images.githubusercontent.com/123513732/236725348-0ae20c2f-6a04-4098-b0de-6cd96ae5c857.png)
-Description: For this example I combined the inverse contains command `-v` with the case insensitive command `-i` and the line count command `-n` while searching for multiple words "the," "risk," and "death." The result returns all the lines that contains "the," "risk," "death," "The," "Risk," or "Death" labelled with the line number that it came from the text file. This is another use case of the `-n` command alonside other grep commands. 
+Description: For this example, I combined the inverse contains command `-v` with the case insensitive command `-i` and the line count command `-n` while searching for multiple words "the," "risk," and "death." The result returns all the lines that contains "the," "risk," "death," "The," "Risk," or "Death" labeled with the line number that came from the text file. This is another use case of the `-n` command alongside other grep commands. 
+
+Using the line count command with grep would be useful to track matches or count the number of the output lines. This would be especially useful when the output is large as the larger the file the more likely there will be more lines outputted which can be difficult to manually count.
 
 Source: ChatGPT, https://chat.openai.com/
 This is what I searched for,
