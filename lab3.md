@@ -59,7 +59,7 @@ This is what I searched for,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/4d254c78-0ae6-4fe1-9aae-d05dae8a96c6)
 
 This is the result,
-![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/c0ced519-2826-4f7c-9aa2-6a3cc6c4fcd5)
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/ae2c5ad2-44f6-4cc0-9121-b953a0e23b61)
 
 ## Inverse Match Search(printing all lines that do not match search term)
 `grep -v "search name" <file name>`
