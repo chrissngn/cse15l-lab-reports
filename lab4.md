@@ -72,7 +72,7 @@ Cd into repo, `cd repo-name`
 
 `git status` to see which files have been modified
 
-`git add` to stage the changes you want to make
+`git add .` to stage the changes you want to make
 
 `git commit -m "descriptive message"` to commit staged changes
 
@@ -80,3 +80,30 @@ Cd into repo, `cd repo-name`
 
 `git remote -v` to see the current remote URL being navigated
 
+1. Remove existing forks of repository using `rm rf <directory>`,
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/dac05601-2394-4755-aaca-d9a417e39fe4)
+2. Fork the repository,
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/5dd96cf1-a933-46e6-885b-140bedefdc08)
+3. Log into ieng6,
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/bdbedecb-83e2-4de3-9467-79340966dd7f)
+4. Clone fork of repo,
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/7ffbfe39-fc15-4288-a4a3-5a4c9d952d7b)
+5. Run tests and show that they fail,
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/97477aaf-077f-40d9-a50d-bb0b6659daad)
+6. Edit code using commands from step 1,
+Commands used,
+`Ls <enter>`
+`Cd lab7 <enter>`
+`vim ListExamples.java + <enter>`
+`j` * 44
+`l`*5
+`x`
+`<esc>`
+`i`
+`2`
+`<esc>`
+`:wq`
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/f26fbbf7-5742-4fa2-85c6-bd522b499808)
+8. Run `Bash Test.sh` to compile
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/0db4ac5d-dc96-4167-b866-23a0df0043a2)
+9. Git status, add, git
