@@ -106,4 +106,15 @@ Commands used,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/f26fbbf7-5742-4fa2-85c6-bd522b499808)
 8. Run `Bash Test.sh` to compile
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/0db4ac5d-dc96-4167-b866-23a0df0043a2)
-9. Git status, add, git
+9. Commit changes to GitHub using commands,
+`git status` to see which files have been modified
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/697d1f25-fca1-42da-89cd-92914b8baf99)
+
+`git add .` to stage the changes you want to make
+
+`git commit -m "descriptive message"` to commit staged changes
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/dedd028f-202f-4e95-8e5f-84e382c5dd7c)
+
+`git push` to push the commited changes or `git push -u origin <branch-name>` if it is the first time pushing changes
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/da71b200-1ab6-42df-a77c-b3b40d594282)
+
