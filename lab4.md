@@ -33,7 +33,7 @@ index1 to become index2
 change name of StringChecker from sc to checker
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/1a683445-2b9b-45dc-bf2e-0a2dbc2def3b)
 
-## Step 2 - Generating keys for ieng6:
+## Step 2 - Generating SSH Keys for ieng6:
 Run `ssh-keygen` command in local terminal,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/4d3650de-cbf8-4540-99b9-6ebce8d3e802)
 
@@ -49,10 +49,7 @@ Locate path to SSH Key enter in this format `scp <path to your public SSH key> c
 Re-log-onto ieng6 account to make sure that it doesn't ask for a password anymore,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/1f1b3e12-35cc-478c-944c-003bbe086a9f)
 
-
-
-
-
+## Step 3 - Generating SSH Keys for GitHub
 
 
 
