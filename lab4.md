@@ -65,5 +65,18 @@ Create "New SSH key," select "Authentication key," and copy/paste SSH public key
 
 ## Step 4 - Base Line, editing and pushing repository
 
+Some commands I used include,
+Clone repository using `git clone <repo url>`
 
+Cd into repo, `cd repo-name`
+
+`git status` to see which files have been modified
+
+`git add` to stage the changes you want to make
+
+`git commit -m "descriptive message"` to commit staged changes
+
+`git push` to push the commited changes or `git push -u origin <branch-name>` if it is the first time pushing changes
+
+`git remote -v` to see the current remote URL being navigated
 
