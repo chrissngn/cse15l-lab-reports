@@ -50,6 +50,13 @@ Re-log-onto ieng6 account to make sure that it doesn't ask for a password anymor
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/1f1b3e12-35cc-478c-944c-003bbe086a9f)
 
 ## Step 3 - Generating SSH Keys for GitHub
+Login into ieng6 account and run `ssh-keygen`,
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/877b9053-ddf7-4da5-91b2-81576f259a08)
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/18dea1c1-a840-41ef-9067-a32c0550bce5)
+
+Display SSH public key using the `cat <path of your ssh key .pub file>`,
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/f811e221-a91f-4e66-8df5-c39cb3f78cbe)
+
 
 
 
