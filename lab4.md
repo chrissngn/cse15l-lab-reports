@@ -57,7 +57,13 @@ Login into ieng6 account and run `ssh-keygen`,
 Display SSH public key using the `cat <path of your ssh key .pub file>`,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/f811e221-a91f-4e66-8df5-c39cb3f78cbe)
 
+Go to settings on GitHub, locate "Access" section, and select "SSH and GPG keys",
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/e38d7a3d-4402-48cd-996b-ce9d44d6bed0)
 
+Create "New SSH key," select "Authentication key," and copy/paste SSH public key from command prompt,
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/e1e5c410-70ee-4386-8f49-191050ca4bda)
+
+## Step 4 - Base Line, editing and pushing repository
 
 
 
