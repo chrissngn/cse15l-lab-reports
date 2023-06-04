@@ -1,19 +1,23 @@
 # Lab Report 4 - VIM 
 
-## Step 1 - Editing from command line using VIM
+## Editing from command line using VIM
 
 Log into ieng6 account:
+`ssh cs15lsp23ko@ieng6-202.ucsd.edu <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/b6b28c55-e094-49ba-89b6-4afe1273da50)
 
 Clone repository using git:
 ```
-$ git clone https://github.com/ucsd-cse15l-s23/lab7
+$ git clone https://github.com/ucsd-cse15l-s23/lab7 <enter>
 ```
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/3cd7d7e5-203f-4058-8763-4e0c1de5984b)
 
 Cd into lab7 repository and run vim command on ListExamples.java(the file we are trying to edit):
 ```
-$vim ListExamples.java
+cd lab7 <enter>
+```
+```
+$vim ListExamples.java <enter>
 ```
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/0fd296df-178d-4084-8cb9-812c21490321)
 
@@ -33,7 +37,7 @@ index1 to become index2
 change name of StringChecker from sc to checker
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/1a683445-2b9b-45dc-bf2e-0a2dbc2def3b)
 
-## Step 2 - Generating SSH Keys for ieng6:
+## Generating SSH Keys for ieng6:
 Run `ssh-keygen` command in local terminal,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/4d3650de-cbf8-4540-99b9-6ebce8d3e802)
 
