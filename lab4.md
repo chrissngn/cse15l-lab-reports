@@ -12,10 +12,14 @@ $ git clone https://github.com/ucsd-cse15l-s23/lab7 <enter>
 ```
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/3cd7d7e5-203f-4058-8763-4e0c1de5984b)
 
-Cd into lab7 repository and run vim command on ListExamples.java(the file we are trying to edit):
+Cd into lab7 repository:
 ```
 cd lab7 <enter>
 ```
+Run tests showing that they fail: 
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/97477aaf-077f-40d9-a50d-bb0b6659daad)
+
+Run vim command on ListExamples.java(the file we are trying to edit):
 ```
 $vim ListExamples.java <enter>
 ```
@@ -34,9 +38,6 @@ Some of the edits I made,
 index1 to become index2
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/57531971-377d-4e55-861d-5f5348aeb77d)
 
-change name of StringChecker from sc to checker
-![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/1a683445-2b9b-45dc-bf2e-0a2dbc2def3b)
-
 ## Generating SSH Keys for ieng6:
 Run `ssh-keygen` command in local terminal,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/4d3650de-cbf8-4540-99b9-6ebce8d3e802)
@@ -53,7 +54,7 @@ Locate path to SSH Key enter in this format `scp <path to your public SSH key> c
 Re-log-onto ieng6 account to make sure that it doesn't ask for a password anymore,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/1f1b3e12-35cc-478c-944c-003bbe086a9f)
 
-## Step 3 - Generating SSH Keys for GitHub
+## Generating SSH Keys for GitHub
 Login into ieng6 account and run `ssh-keygen`,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/877b9053-ddf7-4da5-91b2-81576f259a08)
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/18dea1c1-a840-41ef-9067-a32c0550bce5)
@@ -67,7 +68,7 @@ Go to settings on GitHub, locate "Access" section, and select "SSH and GPG keys"
 Create "New SSH key," select "Authentication key," and copy/paste SSH public key from command prompt,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/e1e5c410-70ee-4386-8f49-191050ca4bda)
 
-## Step 4 - Editing and pushing to repository
+## Steps 4-9, Editing and pushing to repository
 
 Some commands I used include,
 Clone repository using `git clone <repo url>`
