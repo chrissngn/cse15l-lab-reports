@@ -2,7 +2,7 @@
 
 ## Part 1 - Deubugging Scenario
 
-**1. Original post from student:**
+**1. Original post from student**
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/d19ce521-8427-4b3b-84b3-783edd1cde93)
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/ceb9e5ad-120f-46b9-87ae-6b5a314f68eb)
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/cc4aae55-7287-4904-a897-e13da75fa66f)
@@ -18,7 +18,7 @@ ListExamplesTest.java -
 `bash test.sh` - 
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/92ac947a-ac62-459b-a55c-9480b454b6f6)
 
-**2. Response from TA:**
+**2. Response from TA**
 Hello Christine,
 
 It seems that the terminal is reporting an incompatible types error inside of the ListExamples.java on line 15 of the filter() method, `results.add(0,sc)`. sc is has the type of StringChecker, however, the result.add() takes in an integer index and a string which means that calling sc in results.add() will cause an error since sc is not a string type.
@@ -54,4 +54,154 @@ Your test cases should pass as they have been and the error regarding incompatib
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/fa788a24-2a85-4187-8c17-4bf3e4ea8105)
 
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/80df1468-bcad-4ffa-a81a-b8f56274e64c)
+
+**4. Information about the set up**
+Lab 7 Repository: https://github.com/chrissngn/lab7.git
+
+**Files Before Bug Fixes:**
+**ListExamples.java -**
+```
+import java.util.ArrayList;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, sc);
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      // change index1 below to index2 to fix test
+      index2 += 1;
+    }
+    return result;
+  }
+//this is a comment
+
+}                                                                                                                                                 15,24
+```
+**ListExamplesTests.java - **
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.*;
+import java.util.ArrayList;
+
+
+public class ListExamplesTests {
+        @Test(timeout = 500)
+        public void testMerge1() {
+                List<String> l1 = new ArrayList<String>(Arrays.asList("x", "y"));
+                List<String> l2 = new ArrayList<String>(Arrays.asList("a", "b"));
+                assertArrayEquals(new String[]{ "a", "b", "x", "y"}, ListExamples.merge(l1, l2).toArray());
+        }
+
+        @Test(timeout = 500)
+        public void testMerge2() {
+                List<String> l1 = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+                List<String> l2 = new ArrayList<String>(Arrays.asList("c", "d", "e"));
+                assertArrayEquals(new String[]{ "a", "b", "c", "c", "d", "e" }, ListExamples.merge(l1, l2).toArray());
+        }
+
+}
+```
+**Test.sh -**
+```
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
+```
+
+**Command that induced the bug:**
+`bash test.sh`
+
+**Description of edits to fix bugs**
+The only file that needs to be edited to fix the bug is the ListExamples.java file. The bug is on line 15 and it is an incompatible type error. The variable being call `sc` is of the type StringChecker when results.add(int,string) takes in only ints and string. To fix this bug `sc` need to be replaced with `s` which is a string inside of `sc`. After fixing the bug the error should be resolved and all the junit tests should pass.
+
+**ListExamples.java after fix:**
+```
+import java.util.ArrayList;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+        //note the change from sc to s
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      // change index1 below to index2 to fix test
+      index2 += 1;
+    }
+    return result;
+  }
+//this is a comment
+
+}                                 
+```
+
 ## Part 2 - Reflection
