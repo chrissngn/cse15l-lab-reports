@@ -38,28 +38,48 @@ Some of the edits I made,
 index1 to become index2
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/57531971-377d-4e55-861d-5f5348aeb77d)
 
+Commands used,
+`Ls <enter>`
+`Cd lab7 <enter>`
+`vim ListExamples.java + <enter>`
+`j` * 44
+`l`*5
+`x`
+`<esc>`
+`i`
+`2`
+`<esc>`
+`:wq`
+
 ## Generating SSH Keys for ieng6:
 Run `ssh-keygen` command in local terminal,
+`ssh-keygen <enter> <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/4d3650de-cbf8-4540-99b9-6ebce8d3e802)
 
 Click enter, type `y`, and hit `enter` key until randomart image appears,
+`<enter> y <enter> <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/28d4e98b-958a-449d-b06b-a94c449197bc)
 
 Sign into ieng6 account, type in `mkdir .ssh`, and sign out,
+`mkdir .ssh <enter> exit <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/b26c0ede-e15c-4e10-ba59-c84bf3798686)
 
 Locate path to SSH Key enter in this format `scp <path to your public SSH key> cs15lsp23__@ieng6.ucsd.edu:~/.ssh/authorized_keys` and enter password for the last time,
+`scp <ctrl c path to public SSH key> <ctrl p path to public SSH key> cs15lsp23ko@ieng6.ucsd.edu:~/.ssh/authorized_keys <enter> <password> <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/45478fe2-8076-44af-ab69-be8dba442c44)
 
 Re-log-onto ieng6 account to make sure that it doesn't ask for a password anymore,
+`ssh cs15lsp23ko@ieng6-202.ucsd.edu <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/1f1b3e12-35cc-478c-944c-003bbe086a9f)
 
 ## Generating SSH Keys for GitHub
 Login into ieng6 account and run `ssh-keygen`,
+`ssh cs15lsp23ko@ieng6-202.ucsd.edu <enter> ssh-keygen <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/877b9053-ddf7-4da5-91b2-81576f259a08)
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/18dea1c1-a840-41ef-9067-a32c0550bce5)
 
 Display SSH public key using the `cat <path of your ssh key .pub file>`,
+`cat <ctrl c path of your ssh key .pub file> <ctrl p path of your ssh key .pub file> <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/f811e221-a91f-4e66-8df5-c39cb3f78cbe)
 
 Go to settings on GitHub, locate "Access" section, and select "SSH and GPG keys",
@@ -86,14 +106,18 @@ Cd into repo, `cd repo-name`
 `git remote -v` to see the current remote URL being navigated
 
 1. Remove existing forks of repository using `rm rf <directory>`,
+`rm rf lab7 <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/dac05601-2394-4755-aaca-d9a417e39fe4)
 2. Fork the repository,
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/5dd96cf1-a933-46e6-885b-140bedefdc08)
 3. Log into ieng6,
+`ssh cs15lsp23ko@ieng6-202.ucsd.edu <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/bdbedecb-83e2-4de3-9467-79340966dd7f)
 4. Clone fork of repo,
+`$ git clone https://github.com/ucsd-cse15l-s23/lab7 <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/7ffbfe39-fc15-4288-a4a3-5a4c9d952d7b)
 5. Run tests and show that they fail,
+`bash test.sh <enter>`
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/97477aaf-077f-40d9-a50d-bb0b6659daad)
 6. Edit code using commands from step 1,
 Commands used,
