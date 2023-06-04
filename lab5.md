@@ -204,4 +204,8 @@ class ListExamples {
 }                                 
 ```
 
+**Terminal after fixes:**
+![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/3e85ffd8-12d9-4d05-8f3e-da88af068694)
+
 ## Part 2 - Reflection
+The second half of this quarter we worked with vim, bash scripts, and a lot with the command line. The topic I found the coolest was the autograding topics because I was able to see assignments from the TA's point of view. Working with the bash script language was a bit challenging because I wasn't too familar with the syntax but I found the concept of using bash script to grade mock assignments to be enlightening. Before taking this class I often heard the term vim but had no idea what it is was. During the second half of this quarter I learn what vim was and how to use it which was amazing because I can now say that I know how to use vim(kind of lol) and understand the context of it in future conversations.
