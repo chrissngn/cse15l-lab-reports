@@ -148,3 +148,7 @@ Commands used,
 `git push <enter>` to push the commited changes or `git push -u origin <branch-name>` if it is the first time pushing changes
 ![image](https://github.com/chrissngn/cse15l-lab-reports/assets/123513732/da71b200-1ab6-42df-a77c-b3b40d594282)
 
+Repeated x3:
+Time1, 9:27
+Time2, 6:04
+Time3, 4:12
